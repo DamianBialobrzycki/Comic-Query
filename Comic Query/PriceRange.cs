@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace KomiksyJanka
+namespace Comic_Query
 {
     enum PriceRange { Cheap, Midrange, Expensive }
 }

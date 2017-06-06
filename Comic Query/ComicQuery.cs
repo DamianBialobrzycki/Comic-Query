@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KomiksyJanka
+namespace Comic_Query
 {
-    using Windows.UI.Xaml.Media.Imaging;
+    using System.Windows.Media.Imaging;
 
     class ComicQuery
     {

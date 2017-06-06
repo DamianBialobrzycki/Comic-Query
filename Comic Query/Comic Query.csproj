@@ -99,10 +99,18 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="bluegray_250x250.jpg" />
-    <Resource Include="captain_amazing_250x250.jpg" />
-    <Resource Include="captain_amazing_zoom_250x250.jpg" />
-    <Resource Include="purple_250x250.jpg" />
+    <Content Include="bluegray_250x250.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="captain_amazing_250x250.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="captain_amazing_zoom_250x250.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="purple_250x250.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

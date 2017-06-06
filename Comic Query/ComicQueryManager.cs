@@ -4,12 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Globalization;
-using Windows.UI.Popups;
 
-namespace KomiksyJanka
+namespace Comic_Query
 {
     using System.Collections.ObjectModel;
-    using Windows.UI.Xaml.Media.Imaging;
+    using System.Windows.Media.Imaging;
 
     class ComicQueryManager
     {
@@ -75,7 +74,15 @@ namespace KomiksyJanka
 
         private static BitmapImage CreateImageFromAssets(string imageFilename)
         {
-            return new BitmapImage(new Uri("ms-appx:///Assets/" + imageFilename));
+            try
+            {
+                Uri uri = new Uri(imageFilename, UriKind.RelativeOrAbsolute);
+                return new BitmapImage(uri);
+            }
+            catch (System.IO.IOException)
+            {
+                return new BitmapImage();
+            }
         }
 
         public void UpdateQueryResults(ComicQuery query)
